@@ -1,0 +1,11 @@
+version: '2'
+services:
+  web:
+    build: .
+    ports:
+     - "8000:8000"
+    volumes:
+     - .:/go/src/app
+     - /var/run/docker.sock:/var/run/docker.sock
+    tty: true
+    stdin_open: true
